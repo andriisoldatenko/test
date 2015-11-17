@@ -5,7 +5,7 @@ def generate_number():
     pdf = [(12, 0.9), (11, 0.05), (13, 0.05)]
     cdf = [(i, sum(p for j,p in pdf if j < i)) for i,_ in pdf]
     R = max(i for r in [random.random()] for i,c in cdf if c <= r)
-    print R
+    return R
 
 
 class TestUM(unittest.TestCase):
